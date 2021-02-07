@@ -10,6 +10,40 @@ namespace NumberGuesser
     {
         static void Main(string[] args)
         {
+            var RandomNumber =  Guesser();
+            Console.WriteLine("Tell me random number from 0 to 10.");
+            while(true)
+            {
+                var YourTip = Asker(); 
+                if (YourTip != RandomNumber.ToString())
+                {
+                    Console.WriteLine("Wrong!");
+                } else
+                {
+                    Console.WriteLine("You did it!!");
+                    break;
+                }
+            }
+            
+            Console.ReadLine();
         }
+    
+        static int Guesser()
+        {
+            var random = new Random();
+            var list = new List<int>{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+            int index = random.Next(list.Count);
+            return list[index];
+        }
+
+        static string Asker() 
+        {
+            var Ans = Console.ReadLine();
+            return Ans;
+
+        }
+    
     }
+
+
 }

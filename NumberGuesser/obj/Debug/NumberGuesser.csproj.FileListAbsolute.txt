@@ -1,0 +1,7 @@
+C:\Users\drjar\Source\Repos\JKafka97\MyFirstProject-C_Sharp\NumberGuesser\obj\Debug\NumberGuesser.csprojAssemblyReference.cache
+C:\Users\drjar\Source\Repos\JKafka97\MyFirstProject-C_Sharp\NumberGuesser\obj\Debug\NumberGuesser.csproj.CoreCompileInputs.cache
+C:\Users\drjar\Source\Repos\JKafka97\MyFirstProject-C_Sharp\NumberGuesser\bin\Debug\NumberGuesser.exe.config
+C:\Users\drjar\Source\Repos\JKafka97\MyFirstProject-C_Sharp\NumberGuesser\bin\Debug\NumberGuesser.exe
+C:\Users\drjar\Source\Repos\JKafka97\MyFirstProject-C_Sharp\NumberGuesser\bin\Debug\NumberGuesser.pdb
+C:\Users\drjar\Source\Repos\JKafka97\MyFirstProject-C_Sharp\NumberGuesser\obj\Debug\NumberGuesser.exe
+C:\Users\drjar\Source\Repos\JKafka97\MyFirstProject-C_Sharp\NumberGuesser\obj\Debug\NumberGuesser.pdb
