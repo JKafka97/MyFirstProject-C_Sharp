@@ -17,9 +17,12 @@ namespace NumberGuesser
                 var YourTip = Asker(); 
                 if (YourTip != RandomNumber.ToString())
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Wrong!");
+                    Console.ResetColor();
                 } else
                 {
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("You did it!!");
                     break;
                 }
