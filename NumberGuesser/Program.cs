@@ -1,60 +1,54 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NumberGuesser
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            var RandomNumber =  Guesser();
+            var randomNumber = Guesser();
             Console.WriteLine("Tell me random number from 0 to 10.");
-            while(true)
+            while (true)
             {
-                var YourTip = Asker();
+                var yourTip = Asker();
                 try
                 {
-                    Convert.ToInt32(YourTip);
-                    if (YourTip != RandomNumber.ToString())
+                    Convert.ToInt32(yourTip);
+                    if (yourTip != randomNumber.ToString())
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Wrong!");
                         Console.ResetColor();
-                    } else
+                    }
+                    else
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("You did it!!");
                         break;
                     }
-                } 
-                catch (Exception e)
+                }
+                catch (Exception)
                 {
-                Console.WriteLine("Invalid input, plese enter number from 1 - 10.");
-                }    
-            }       
+                    Console.WriteLine("Invalid input, please enter number from 1 - 10.");
+                }
+            }
+
             Console.ReadLine();
-        
-    
-        int Guesser()
+        }
+
+        private static int Guesser()
         {
             var random = new Random();
-            var  list = new List<int>{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-            int index = random.Next(list.Count);
+            var list = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            var index = random.Next(list.Count);
             return list[index];
         }
 
-        string Asker() 
+        private static string Asker()
         {
-            var Ans = Console.ReadLine(); 
-            return Ans;
-
+            var ans = Console.ReadLine();
+            return ans;
         }
-    
-        }
-
-
     }
 }
