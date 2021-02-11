@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\NumberGuesser"
   ],
-  "SelectedNode": "\\NumberGuesser.cs",
+  "SelectedNode": "\\NumberGuesser",
   "PreviewInSolutionExplorer": false
 }
