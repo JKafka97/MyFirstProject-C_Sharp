@@ -1,33 +1,53 @@
-﻿using System;
+﻿using MyFirstGetAPI.Models;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace MyFirstGetAPI.Controllers
 {
     public class PeopleController : ApiController
     {
-        // GET: api/People
-        public IEnumerable<string> Get()
+        private List<Person> people = new List<Person>();
+
+        public PeopleController()
         {
-            return new string[] { "value1", "value2" };
+            people.Add(new Person { FirstName = "Tim", LastName = "Corey", Id = 1 });
+            people.Add(new Person { FirstName = "Bob", LastName = "Mac", Id = 2 });
+            people.Add(new Person { FirstName = "Josh", LastName = "Duck", Id = 3 });
+        }
+        
+        [Route("api/People/GetFirstName")]
+        [HttpGet]
+        public List<string> GetFirstNames()
+        {
+            List<string> output = new List<string>();
+            foreach (var p in people)
+            {
+                output.Add(p.FirstName);
+            }
+
+            return output;
+        }
+        // GET: api/People
+        public List<Person> Get()
+        {
+            return people;
         }
 
         // GET: api/People/5
-        public string Get(int id)
+        public Person Get(int id)
         {
-            return "value";
+            return people.Where(x => x.Id == id).FirstOrDefault();
         }
 
         // POST: api/People
-        public void Post([FromBody]string value)
+        public void Post(Person val1)
         {
+            people.Add(val1);
         }
 
         // PUT: api/People/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody] string value)
         {
         }
 
