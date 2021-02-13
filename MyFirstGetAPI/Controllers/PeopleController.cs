@@ -16,9 +16,9 @@ namespace MyFirstGetAPI.Controllers
             people.Add(new Person { FirstName = "Josh", LastName = "Duck", Id = 3 });
         }
         
-        [Route("api/People/GetFirstName")]
+        [Route("api/People/GetFirstName/{userId:int}/{age:int}")]
         [HttpGet]
-        public List<string> GetFirstNames()
+        public List<string> GetFirstNames(int userId, int age)
         {
             List<string> output = new List<string>();
             foreach (var p in people)
